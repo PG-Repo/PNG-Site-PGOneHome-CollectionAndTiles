@@ -1,0 +1,423 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '../Common/SassMixin/CollectionListMixins.module.scss';
+
+.callout {
+  max-width: 300px;
+
+  .editSitesInCollectionCallOutContent {
+    margin: 20px;
+    line-height: 20px;
+  }
+}
+
+.collectionTopSettings {
+  margin-left: 5px !important;
+
+  .collectionDetails {
+    float: left;
+
+    .collectionName {
+      display: inline-block;
+      max-width: 300px;
+      max-height: 50px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: $ms-font-size-xl;
+      margin: 0px;
+      font-weight: normal;
+      
+      @include for-phone-only {
+        font-size: 20px;
+        margin-left: 5px;
+        max-width: 185px;
+        padding-right: 0px;
+      }
+
+      @include for-big-desktop-up {
+        max-width: 550px;
+      }
+    }
+  }
+
+  .followorUnfollowSection {
+    display: inline-flex;
+  }
+
+  .followingorUnfollow {
+    display: inline-flex;
+    margin-left: 10px;
+    bottom: 7px;
+    position: relative;
+
+    .followingOrUnfollowButton {
+      text-align: center;
+      font-size: 12px;
+      vertical-align: top;
+      font-weight: 600;
+      padding: 3px;
+      display: flex;
+      color: #fff;
+      height: 30px;
+
+      i {
+        font-weight: $ms-font-weight-bold;
+        font-size: 12px;
+      }
+    }
+
+    .unfollowButton {
+      background-color: #da0e1b;
+    }
+
+    .followingButton {
+      background-color: #007b2c;
+    }
+  }
+
+  .follow {
+    display: inline-flex;
+    margin-left: 10px;
+    bottom: 7px;
+    position: relative;
+
+    .followButton {
+      background-color: #00A3E0;
+      text-align: center;
+      font-size: 12px;
+      vertical-align: top;
+      font-weight: 600;
+      padding: 3px;
+      display: flex;
+      color: #fff;
+      height: 30px;
+
+      i {
+        font-weight: $ms-font-weight-bold;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .collectionSettings {
+    float: right;
+    font-size: 15px;
+    margin-right: 5px;
+
+    @include for-phone-only {
+      font-size: $ms-font-size-l;
+    }
+
+    @include for-big-desktop-up {
+      font-size: $ms-font-size-l;
+    }
+
+    .shareCollectionInMail {
+      display: inline-block;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      vertical-align: middle;
+      margin: 0px 8px;
+      color: #003DA5;
+
+      @include for-phone-only {
+        margin: 0px 5px;
+      }
+    }
+
+    i {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  .ownerTasks {
+    display: inline-block;
+    margin-left: 10px;
+    top: 2px;
+    position: relative;
+
+    @include for-phone-only {
+      margin-left: 2px;
+    }
+
+    button {
+      text-decoration: none;
+      vertical-align: middle;
+      margin: 0px 8px;
+      color: #003DA5;
+
+      @include for-phone-only {
+        margin: 0px 2px;
+      }
+    }
+
+    i {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+
+.collectionSettingsPanel {
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -15px;
+    }
+  }
+
+  .collectionSettingsContent {
+    margin-top: -17px;
+
+    @include for-phone-only {
+      margin: 0px 10px;
+    }
+
+    .spinner {
+      position: absolute;
+      top: 40vh;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .corpCollectionMessage {
+      color: #A4262C;
+      margin-top: 10px;
+      display: block;
+      font-family: Open Sans, sans-serif;
+    }
+
+    .adminRequestAvailableMessage {
+      color: #A4262C;
+      margin-top: 30px;
+      display: block;
+    }
+  }
+
+  label {
+    font-weight: 500;
+    font-size: $ms-font-size-m;
+    margin-top: 10px;
+  }
+
+  .btnContainer {
+    button {
+      margin-right: 10px;
+    }
+  }
+}
+
+.editSitesinCollectionPanel {
+
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -10px;
+    }
+  }
+
+  .infoIconArea {
+    position: absolute;
+    top: 58px;
+    right: 40px;
+  }
+
+  .showEditSitesInCollectionInstructionInPanel {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+
+    .tileColor {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: -1px;
+    }
+
+    .applicationTileTitle {
+      border-bottom: 1px solid gray;
+      font-size: 18px;
+      font-weight: 500;
+      display: inline-block;
+      width: 96%;
+
+      @include for-phone-only {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 92%;
+        margin-bottom: -3px;
+      }
+    }
+
+    .applicationTileDescription {
+      font-size: 15px;
+      line-height: 22px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .gotoSiteLink {
+      margin-top: 20px;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .hideEditSitesInCollectionInstructionInPanel {
+    display: none;
+  }
+
+  .editSitesinCollectionContent {
+    .spinner {
+      position: absolute;
+      top: 40vh;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .editSitesinCollectionLeftPart {
+    border-right: 1px solid grey;
+
+    @include for-phone-only {
+      border: none;
+    }
+
+    .requiredCheckBoxCheck {
+      font-family: Open Sans, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #A4262C;
+    }
+
+    .applicationTileItems {
+      max-height: 60vh;
+      overflow: auto;
+      margin-left: -40px;
+      margin-top: 0px;
+      li {
+        list-style: none;
+
+        label {
+          font-size: $ms-font-size-m;
+          font-weight: $ms-font-weight-regular;
+          margin-top: 10px;
+          //white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .editSitesinCollectionRightPart {
+    margin-top: -9px;
+  }
+
+  .btnContainer {
+    button {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+.followDialog {
+  div {
+    text-align: center;
+  }
+
+  .followDialogContent {
+    bottom: 15px;
+    position: relative;
+    text-align: center;
+
+    i {
+      font-size: 45px;
+      display: block;
+      color: #7f7f7f;
+    }
+
+    .followDialogTitle {
+      margin-bottom: 24px;
+      font-weight: $ms-font-weight-bold;
+      font-size: $ms-font-size-xl;
+    }
+
+    .followDialogText {
+      font-size: $ms-font-size-s;
+      margin-left: -2px;
+    }
+  }
+
+  .unFollowbutton {
+    margin-right: 10px;
+
+    @include for-phone-only {
+      top: 8px;
+      left: 8px;
+    }
+  }
+}
+
+.deleteCollectionConfirmationDialog {
+  div {
+    text-align: center;
+  }
+
+  .deleteCollectionConfirmationDialogContent {
+    bottom: 15px;
+    position: relative;
+    text-align: center;
+
+    i {
+      font-size: 45px;
+      display: block;
+      color: #7f7f7f;
+    }
+
+    .deleteCollectionConfirmationDialogTitle {
+      margin-bottom: 24px;
+      font-weight: $ms-font-weight-bold;
+      font-size: $ms-font-size-xl;
+    }
+
+    .deleteCollectionConfirmationDialogText {
+      font-size: $ms-font-size-s;
+      margin-left: -2px;
+    }
+  }
+
+  .deleteCollectionbutton {
+    margin-right: 10px;
+
+    @include for-phone-only {
+      top: 8px;
+      left: 8px;
+    }
+  }
+}

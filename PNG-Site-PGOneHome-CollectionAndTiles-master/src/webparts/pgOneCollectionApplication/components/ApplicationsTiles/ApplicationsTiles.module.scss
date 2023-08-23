@@ -1,0 +1,195 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '../Common/SassMixin/CollectionListMixins.module.scss';
+
+.callout {
+  max-width: 200px;
+
+  .vpnCallOutContent {
+    margin: 10px;
+  }
+}
+
+.applicationTiles {
+  margin-top: 15px;
+
+  @include for-phone-only {
+    margin-left: 10px;
+    margin-bottom: 40px;
+  }
+
+  .applicationTilesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .applicationTile {
+      margin: 10px;
+      width: 174px;
+      height: 100px;
+      position: relative;
+
+      &:hover {
+        .deleteIcon {
+          @include for-desktop-up {
+            display: block !important;
+          }
+        }
+      }
+
+      @include for-phone-only {
+        width: 135px;
+      }
+
+      .deleteIcon {
+        display: none;
+        top: 5px;
+        right: 5px;
+        position: absolute;
+      }
+
+      .vpnIcon {
+        display: block;
+        top: 5px;
+        right: 20px;
+        position: absolute;
+
+        @include for-phone-only {
+          display: block !important;
+          top: 5px;
+          right: 5px;
+          position: absolute;
+        }
+      }
+
+      .applicationTileItem {
+        text-align: center;
+        font-size: $ms-font-size-xl;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        width: auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        @include for-phone-only {
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+  }
+
+  .vpnInstruction {
+    margin: 0px 20px 10px 10px;
+    display: inline-flex;
+
+    i {
+      font-weight: bold;
+    }
+
+    span {
+      font-style: italic;
+      padding-left: 5px;
+    }
+  }
+}
+
+.spinnerModal {
+  .showLoaderSpinner {
+    padding: 10px;
+  }
+}
+
+.removeApplicationDialog {
+  div {
+    text-align: center;
+  }
+
+  .removeApplicationDialogContent {
+    bottom: 15px;
+    position: relative;
+    text-align: center;
+
+    i {
+      font-size: 45px;
+      display: block;
+      color: #7f7f7f;
+    }
+
+    .removeApplicationDialogTitle {
+      margin-bottom: 24px;
+      font-weight: $ms-font-weight-bold;
+      font-size: $ms-font-size-xl;
+    }
+
+    .removeApplicationDialogText {
+      font-size: $ms-font-size-s;
+      margin-left: -2px;
+    }
+  }
+
+  .removeApplicationbutton {
+    margin-right: 10px;
+
+    @include for-phone-only {
+      top: 8px;
+      left: 8px;
+    }
+  }
+}
+
+
+.removeLastApplicationDialog {
+  div {
+    text-align: center;
+  }
+
+  .removeLastApplicationDialogContent {
+    bottom: 15px;
+    position: relative;
+    text-align: center;
+
+    i {
+      font-size: 45px;
+      display: block;
+      color: #A4262C;
+    }
+
+    .removeLastApplicationDialogTitle {
+      margin-bottom: 24px;
+      font-weight: $ms-font-weight-bold;
+      font-size: $ms-font-size-xl;
+    }
+
+    .removeLastApplicationDialogText {
+      font-size: $ms-font-size-s;
+      margin-left: -2px;
+      color: #A4262C;
+      margin-top: 30px;
+      line-height: 1.5em;
+    }
+  }
+
+  .vpnConnectivityCheckDialogFooter {
+    margin-top: -12px;
+
+    span:first-child {
+      display: block;
+    }
+
+    span {
+      a {
+        display: flex;
+        font-size: $ms-font-size-s;
+        float: right;
+        color: #003da5;
+        font-family: Open Sans,sans-serif;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

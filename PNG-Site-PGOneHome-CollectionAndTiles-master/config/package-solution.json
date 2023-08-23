@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "PNG-Site-PGOneHome-CollectionAndTiles",
+    "id": "569dbd4c-d5a9-49a6-89bf-adcf1df06b08",
+    "version": "1.0.0.4",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/PNG-Site-PGOneHome-CollectionAndTiles.sppkg"
+  }
+}

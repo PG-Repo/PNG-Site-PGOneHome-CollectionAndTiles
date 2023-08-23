@@ -1,0 +1,170 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+@import './Common/SassMixin/CollectionListMixins.module.scss';
+
+.spinner {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.errorMessageBar {
+  margin-top: 10px;
+}
+
+.readOnlyUserMessageBar {
+  margin-bottom: 10px;
+  margin-top: -1px;
+  margin-left: 15px;
+
+  span {
+    font-size: $ms-font-size-m;
+    font-family: Open Sans, sans-serif;
+
+    @include for-phone-only {
+      font-size: $ms-font-size-s;
+    }
+
+    &>a {
+      font-size: $ms-font-size-m !important;
+      font-family: Open Sans, sans-serif !important;
+
+      @include for-phone-only {
+        font-size: $ms-font-size-s;
+      }
+    }
+  }
+
+
+  @include for-phone-only {
+    width: 98%;
+    margin-left: 12px;
+    margin-right: 14px;
+    padding-right: 14px !important;
+  }
+}
+
+.readOnlyProfileDialog {
+  div {
+    text-align: center;
+  }
+
+  .readOnlyProfileDialogContent {
+    bottom: 15px;
+    position: relative;
+    text-align: center;
+
+    i {
+      font-size: 45px;
+      display: block;
+      color: #7f7f7f;
+    }
+
+    .readOnlyProfileDialogText {
+      font-size: $ms-font-size-s;
+      margin-left: -2px;
+
+      a {
+        margin-left: 2px;
+        font-family: Open Sans, sans-serif;
+      }
+    }
+  }
+
+  .readOnlyProfileDialogButton {
+    margin-right: 10px;
+
+    @include for-phone-only {
+      top: 8px;
+      left: 8px;
+    }
+  }
+}
+
+.pgOneCollectionApplication {
+  margin-left: -24px !important;
+  margin-top: 12px !important;
+  min-width: 340px;
+
+  li {
+    list-style: none;
+  }
+
+  .pgOneCollectionsLeftNavigation {
+    border-right: 2px solid #7f7f7f;
+    padding-right: 0px;
+
+    @include for-phone-only {
+      display: none !important;
+    }
+
+    .cancelLeftNavigation {
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+  }
+
+  .showLeftNavigation {
+    @include for-phone-only {
+      height: 100%;
+      width: 75%;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      padding-top: 25px;
+      border: none;
+      display: block !important;
+
+      .cancelLeftNavigation {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 17px;
+
+        i {
+          font-size: $ms-font-size-l;
+          font-weight: $ms-font-weight-bold;
+        }
+      }
+    }
+  }
+
+  .pgOneCollectionsMiddleContent {
+    .openLeftNavigationMenu {
+      font-size: $ms-font-size-xl;
+      font-weight: $ms-font-weight-semibold;
+      margin-left: 12px;
+
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+
+      i {
+        font-size: $ms-font-size-l;
+        font-weight: $ms-font-weight-bold;
+      }
+    }
+  }
+
+  :global {
+    @import 'node_modules/office-ui-fabric-react/dist/css/fabric.css';
+  }
+
+  .successMessageBar {
+    margin-bottom: 10px;
+    font-size: $ms-font-size-m;
+
+    @include for-phone-only {
+      font-size: $ms-font-size-s;
+    }
+  }
+
+  @include for-phone-only {
+    padding: 0px 8px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,210 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '../Common/SassMixin/CollectionListMixins.module.scss';
+
+.ManageSnowRequests {
+  padding: 0px 15px;
+
+  h2{
+    margin: 0;
+  }
+  .ms-Grid {
+    padding-top: 6px;
+  }
+
+  .ms-Grid-col {
+    margin-bottom: 10px;
+  }
+
+  .gridRowFilter {
+    padding: 4px 0px 25px 0px;
+  }
+
+  .gridRowDetailsList {
+    padding: 4px 0px 30px 0px;
+
+    button {
+      margin: 0px 5px;
+      //color: red;
+    }
+
+  }
+
+  .shimmerLoader {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  :global {
+    .searchBoxPG {
+      float: right !important;
+    }
+
+    .detailsListContoll {
+      @include for-phone-only {
+        margin: 11px 0px;
+      }
+
+      .paginationDropdown{
+          display: inline-flex;
+          margin-top: 6px;
+      }
+    }
+
+    .paginationList {
+      text-align: right;
+    }
+
+    .paginationList button {
+      min-width: 15px !important;
+      border: none;
+
+      @include for-phone-only {
+        display: none;
+      }
+
+    }
+
+    .paginationList button:nth-child(1),
+    .paginationList button:nth-child(2),
+    .paginationList button:nth-last-child(1),
+    .paginationList button:nth-last-child(2) {
+      @include for-phone-only {
+        display: inline-block;
+        margin: 0px;
+      }
+    }
+
+  }
+}
+
+.ManageSnowRequestsPanel {
+  .ms-Panel-header {
+    margin-top: 0px;
+  }
+
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -15px;
+    }
+  }
+
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    // padding: 0px;   
+  }
+
+
+  .ms-Label {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+  }
+
+  .ms-font-m {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px 0px 10px 0px;
+  }
+
+
+}
+
+.ManageSnowRequestsEditPanel {
+  .ms-Panel-header {
+    margin-top: 0px;
+  }
+
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -15px;
+    }
+  }
+
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    // padding: 0px;   
+  }
+
+  .ms-Label {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+  }
+
+  .ms-font-m {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px 0px 10px 0px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+
+  .existingRecordDiv {
+    margin-bottom: 10px;
+  }
+
+}
+
+.dialog {
+  .contentClass {
+    text-align: center;
+
+    h2 {
+      margin: 0px;
+    }
+  }
+
+  .ms-Dialog-actionsButton div {
+    text-align: center;
+  }
+
+
+}
+
+.myTilesItems {
+  font-size: 14px;
+  Label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+    :global {
+   
+        .ms-DetailsHeader-cellName{
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+    .optionalColumn {
+      display: none;
+    }
+  }
+}
+
+.searchRow{
+  background-color: #D3D3D3 !important;
+  padding: 5px 0px !important;
+  @include for-tablet-portrait-up {
+    margin-left: 0px !important;
+  }
+  @include for-phone-only {
+    margin-left: 5px !important;
+  }
+}
+.custRow{ 
+  padding-bottom: 10px;
+  button, link{
+    padding: 6px;
+  }
+}

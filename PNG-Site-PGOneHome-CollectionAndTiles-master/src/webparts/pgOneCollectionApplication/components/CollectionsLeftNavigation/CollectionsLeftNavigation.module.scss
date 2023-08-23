@@ -1,0 +1,479 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '../Common/SassMixin/CollectionListMixins.module.scss';
+
+.callout {
+  max-width: 300px;
+
+  .editFollowedCollectionCallOutContent {
+    margin: 20px;
+    line-height: 20px;
+  }
+}
+
+.collectionsLeftNavigation {
+
+  @include for-phone-only {
+    margin-top: 30px;
+  }
+
+  hr {
+    margin: 0px 20px 0 20px;
+  }
+
+  li {
+    padding: 5px 0px;
+    display: flex;
+  }
+
+  .active {
+    background: #646464;
+    border: 1pt solid #646464;
+
+    a,
+    button,
+    i {
+      color: #ffffff !important;
+      font-weight: $ms-font-weight-regular !important;
+    }
+  }
+
+  .pgOneCollections {
+    position: relative;
+    z-index: 0;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    margin-left: 30px;
+
+    @include for-phone-only {
+      margin-left: 0px;
+    }
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+
+    .activeLink {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: normal;
+    }
+
+    .pgOneCollectionItem {
+      padding: 6px 0px;
+      width: 100%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: block;
+
+      @include for-phone-only {
+        padding: 8px 0px;
+      }
+
+      a {
+        font-size: $ms-font-size-m;
+        cursor: pointer;
+        padding: 3px 20px;
+        text-align: left;
+        align-self: flex-start;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0px 3px;
+        text-decoration: none;
+        color: inherit;
+
+        @include for-big-desktop-up {
+          font-size: $ms-font-size-l;
+        }
+      }
+    }
+  }
+
+  .sortableContainer {
+    cursor: move !important;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2), 0 -5px 5px -5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .settingsMenu {
+    font-size: 14px;
+    padding: 3px 20px;
+
+    button {
+      border: none;
+    }
+
+    .userActionLinks {
+      @include for-phone-only {
+        margin-left: -30px;
+      }
+
+      margin: 0px 0px 0px -12px;
+
+      hr {
+        margin: 5px 0px;
+      }
+
+      li {
+        i {
+          margin: 0px 5px;
+          font-weight: $ms-font-weight-semibold;
+          color: #003DA5;
+          top: 2px;
+          position: relative;
+        }
+
+        button,
+        a {
+          color: #003DA5;
+        }
+
+        a {
+          bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+.createCollectionPanel {
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -15px;
+    }
+  }
+
+  .createCollectionPanelContent {
+    margin-top: -17px;
+
+    @include for-phone-only {
+      margin: 0px 10px;
+    }
+
+    .spinner {
+      position: absolute;
+      top: 40vh;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .chkBoxCollectionType {
+    margin-top: 5px;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: $ms-font-size-m;
+    margin-top: 10px;
+  }
+
+  .createCollectionsLeftPart {
+    border-right: 1px solid grey;
+    margin-left: -8px;
+
+    @include for-phone-only {
+      border: none;
+      width: 105%;
+    }
+
+    .requiredCheckBoxCheck {
+      font-family: Open Sans, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #A4262C;
+    }
+
+    .applicationTilesList {
+      max-height: 35vh;
+      overflow: auto;
+      margin-left: -40px;
+      margin-top: 0px;
+
+      @include for-phone-only {
+        max-height: 20vh;
+      }
+
+      li {
+        list-style: none;
+
+        label {
+          font-size: $ms-font-size-m;
+          font-weight: $ms-font-weight-regular;
+        }
+      }
+    }
+  }
+
+  .createCollectionsRightPart {
+    margin-top: -18px;
+  }
+
+  .showCreateCollectionInstructionInPanel {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+
+    @include for-phone-only {
+      margin-left: -8px;
+    }
+
+    .tileColor {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: -1px;
+    }
+
+    .applicationTileTitle {
+      border-bottom: 1px solid gray;
+      font-size: 18px;
+      font-weight: 500;
+      display: inline-block;
+      width: 96%;
+
+      @include for-phone-only {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 92%;
+        margin-bottom: -3px;
+      }
+    }
+
+    .applicationTileDescription {
+      font-size: 15px;
+      line-height: 22px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .gotoSiteLink {
+      margin-top: 20px;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .hideCreateCollectionInstructionInPanel {
+    display: none;
+  }
+
+  .btnContainer {
+    button {
+      margin-right: 10px;
+    }
+  }
+}
+
+.editFollowedCollectionPanel {
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -10px;
+    }
+  }
+
+  .infoIconArea {
+    position: absolute;
+    top: 58px;
+    right: 12px;
+  }
+
+  .editFollowedCollectionContent {
+    .spinner {
+      position: absolute;
+      top: 40vh;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .editFollowedCollectionLeftPart {
+    border-right: 1px solid grey;
+
+    @include for-phone-only {
+      border: none;
+    }
+
+    .collectionItems {
+      max-height: 60vh;
+      overflow: auto;
+      margin-left: -40px;
+
+      li {
+        list-style: none;
+
+        label {
+          font-size: $ms-font-size-m;
+          font-weight: $ms-font-weight-regular;
+          margin-top: 10px;
+          //white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .editFollowedCollectionRightPart {
+    margin-top: -9px;
+  }
+
+  .hideEditFollowedCollectionInstructionInPanel {
+    display: none;
+  }
+
+  .showEditFollowedCollectionInstructionInPanel {
+    display: block;
+
+    .collectionTitle {
+      border-bottom: 1px solid gray;
+      font-size: 18px;
+      font-weight: 500;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .collectionDescription {
+      font-size: 15px;
+      line-height: 22px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .collectionDetailsLink {
+      margin-top: 20px;
+      text-align: center;
+
+      a {
+        margin: 35px;
+
+        @include for-phone-only {
+          margin: 10px;
+          display: inherit;
+        }
+      }
+    }
+  }
+
+  .btnContainer {
+    button {
+      margin-right: 10px;
+    }
+  }
+}
+
+/*Added by Sunny*/
+.tileRequestAddPanel {
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -10px;
+      margin-left: 15px;
+    }
+  }
+
+  .tileRequestPanelContent {
+    margin-top: -8px;
+    margin-left: -5px;
+
+    @include for-phone-only {
+      margin: 0px 10px;
+    }
+  }
+
+  Label {
+    font-weight: 500;
+  }
+
+  .linkText {
+    font-weight: normal;
+  }
+
+  .isAvailableExternalLabel {
+    margin-top: 5px;
+  }
+}
+
+
+
+.breakingNewsPanel {
+
+  // @extend .tileRequestPanel;
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -10px;
+      margin-left: 15px;
+    }
+  }
+
+  .tileRequestPanelContent {
+    margin-top: -24px;
+    margin-left: -8px;
+
+    @include for-phone-only {
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: -15px;
+    }
+  }
+
+  Label {
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+      -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(50, 49, 48);
+    box-sizing: border-box;
+    box-shadow: none;
+    margin: 0px;
+    display: block;
+    padding: 5px 0px;
+    overflow-wrap: break-word;
+
+    Div {
+      font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+        -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgb(50, 49, 48);
+      box-sizing: border-box;
+      box-shadow: none;
+      margin: 0px;
+      display: block;
+      padding: 5px 0px;
+      overflow-wrap: break-word;
+    }
+  }
+
+  :global {
+    .ql-toolbar {
+      top: 178px !important;
+      // right: 42px !important;
+    }
+
+    .ql-container.ql-snow {
+      border: 1px solid #323130 !important;
+    }
+  }
+}

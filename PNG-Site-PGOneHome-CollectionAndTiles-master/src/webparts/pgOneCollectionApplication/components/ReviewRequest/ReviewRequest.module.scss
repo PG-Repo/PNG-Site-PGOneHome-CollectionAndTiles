@@ -1,0 +1,338 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '../Common/SassMixin/CollectionListMixins.module.scss';
+
+.reviewRequest{
+  padding: 0px 15px;
+
+  h2{
+    margin: 0;
+  }
+  .paginationDropdown{
+    display: inline-flex;
+    margin-top: 6px;
+    font-weight: 500;
+    @include for-phone-only {
+      margin: 12px 0px;
+    }
+  }
+  .requestTypeText{
+    display: inline-flex;
+    margin-top: 6px; 
+  }
+  :global{
+    .detailsListContoll {
+      @include for-phone-only {
+        margin: 11px 0px;
+      }
+    }
+  }
+}
+
+.gridRowFilter{  
+  padding: 0px 0px 6px 0px !important; 
+  margin: 0px -36px -9px -6px !important;
+        :global {
+          .ms-Grid-col{
+            @include for-tablet-portrait-up {
+              padding: 0px 0px 5px 7px;
+            }
+            @include for-phone-only {
+              padding-bottom: 5px;
+              
+          }
+        }
+    }
+}
+
+.searchRow{
+  background-color: #D3D3D3 !important;
+  padding: 5px 0px !important;
+  @include for-tablet-portrait-up {
+    margin-left: 0px !important;
+  }
+  @include for-phone-only {
+    margin-left: 7px !important;
+  }
+}
+
+.detailedList {
+  font-size: 14px;
+
+  //max-height: 400px;
+  Label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  :global {
+    .ms-DetailsHeader-cellName {
+      font-weight: 600 !important;
+      font-size: 14px;
+    }
+    
+    
+
+    // .ms-Dropdown-container > .ms-Label{
+    //   margin-left: -35px;
+    // }
+    // .ms-DetailsList-contentWrapper {
+    //   height: 300px !important;
+    //   overflow-y: auto !important;
+    //   overflow-x: hidden !important;
+    //   z-index: -1 !important;
+    // }
+  }
+}
+
+.paginationDropdown{
+  display: inline-flex;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.paginationList {
+  text-align: right;
+  padding-top: 5px;
+}
+
+.paginationList button {
+  min-width: 15px !important;
+  border: none;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+}
+
+.paginationList button:nth-child(1),
+.paginationList button:nth-child(2),
+.paginationList button:nth-last-child(1),
+.paginationList button:nth-last-child(2) {
+  @include for-phone-only {
+    display: inline-block;
+    margin: 0px;
+  }
+}
+
+Label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.shimmerLoader {
+  margin-left: 10px 0px;
+}
+
+/*Added by Sunny*/
+.tileReviewRequestPanel {
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+
+    @include for-phone-only {
+      margin-top: -10px;
+      margin-left: -5px;
+  
+      @include for-phone-only {
+        margin: 0px 10px;
+      }
+    }
+  
+    // Label {
+    //   margin-top: 5px;
+    //   font-weight: 500;
+    // }
+    label, label > div {
+      font-weight: 500;
+      font-size: $ms-font-size-m;
+      margin-top: 7px;
+    }
+  }
+
+  .tileReviewRequestPanelContent {
+    margin-top: -10px;
+    margin-left: -5px;
+
+    @include for-phone-only {
+      margin: 0px 10px;
+    }
+  }
+
+  Label {
+    font-weight: 500;
+  }
+
+  .linkText {
+    font-weight: normal;
+  }
+
+  .approveBtn {
+    background-color: $ms-color-greenDark;
+    color: $ms-color-white;
+  }
+
+  .rejectBtn {
+    background-color: $ms-color-redDark;
+    color: $ms-color-white;
+  }
+}
+
+.createCollectionPanel {
+  .headerText {
+    font-weight: $ms-font-weight-semibold;
+    margin-top: -36px;
+    margin-left: -10px;
+
+    @include for-phone-only {
+      margin-top: -15px;
+      margin-left: 0px;
+    }
+  }
+
+  .createCollectionPanelContent {
+    margin-top: -17px;
+
+    @include for-phone-only {
+      margin: 0px 10px;
+    }
+  }
+
+  .chkBoxCollectionType {
+    margin-top: 5px;
+  }
+
+  label,
+  label>div {
+    font-weight: 500;
+    font-size: $ms-font-size-m;
+    margin-top: 10px;
+  }
+
+  .createCollectionsLeftPart {
+    border-right: 1px solid grey;
+    margin-left: -8px;
+
+    @include for-phone-only {
+      border: none;
+      width: 105%;
+    }
+  
+    label, label > div {
+      font-weight: 500;
+      font-size: $ms-font-size-m;
+      margin-top: 7px;
+    }
+
+    .applicationTilesList {
+      margin-left: -40px;
+      list-style: none;
+      max-height: 35vh;
+      overflow: auto;
+
+      @include for-phone-only {
+        max-height: 20vh;
+      }
+
+      li {
+        list-style: circle;
+
+        label {
+          font-size: $ms-font-size-m;
+          font-weight: $ms-font-weight-regular;
+        }
+      }
+    }
+  }
+
+  .createCollectionsRightPart {
+    margin-top: -18px;
+  }
+
+  .showCreateCollectionInstructionInPanel {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+
+    .tileColor {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: -1px;
+    }
+
+    .applicationTileTitle {
+      border-bottom: 1px solid gray;
+      font-size: 18px;
+      font-weight: 500;
+      display: inline-block;
+      width: 96%;
+
+      @include for-phone-only {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 92%;
+        margin-bottom: -3px;
+      }
+    }
+
+    .applicationTileDescription {
+      font-size: 15px;
+      line-height: 22px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .gotoSiteLink {
+      margin-top: 20px;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .hideCreateCollectionInstructionInPanel {
+    display: none;
+  }
+
+  .btnContainer {
+    button {
+      margin-right: 10px;
+    }
+  }
+
+  .approveBtn {
+    background-color: $ms-color-greenDark;
+    color: $ms-color-white;
+  }
+
+  .rejectBtn {
+    background-color: $ms-color-redDark;
+    color: $ms-color-white;
+  }
+}
+
+.multiSelectCheckBox {
+  height: auto;
+}
+
+.applicationTilesList {
+  margin-left: -40px;
+  list-style: none;
+  max-height: 35vh;
+  overflow: auto;
+
+  @include for-phone-only {
+    max-height: 20vh;
+  }
+
+  li {
+    list-style: none;
+
+    label {
+      font-size: $ms-font-size-m;
+      font-weight: $ms-font-weight-regular;
+    }
+  }
+}
